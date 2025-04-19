@@ -1,0 +1,92 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silog Express</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+   <!-- Login/Register Container -->
+   <div id="auth-container" class="auth-container">
+    <h2>Welcome!!</h2>
+    <div class="auth-tabs">
+        <button class="tab-btn active" data-tab="login">Login</button>
+        <button class="tab-btn" data-tab="register">Register</button>
+    </div>
+    
+    <div id="login-form" class="auth-form">
+        <form>
+            <div class="input-group">
+                <input type="text" id="login-username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="login-password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+ 
+    <div id="register-form" class="auth-form hidden">
+        <form>
+            <div class="input-group">
+                <input type="text" id="reg-username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="reg-email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="reg-password" placeholder="Password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+<!-- Menu Container -->
+<div id="menu-container" class="container menu-container hidden">
+    <div class="header">
+        <h2>Silog Express Menu</h2>
+        <div class="header-buttons">
+            <button id="history-btn">Order History</button>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
+    
+    <div id="menu-items" class="menu-grid"></div>
+    
+    <div id="cart" class="cart-section">
+        <h3>Your Cart</h3>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>₱<span id="cart-total">0.00</span></span>
+        </div>
+        <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+
+<!-- Receipt Container -->
+<div id="receipt-container" class="container receipt-container hidden">
+    <div class="receipt-header">
+        <h2>Order Receipt</h2>
+    </div>
+    <div id="receipt-content" class="receipt-content"></div>
+    <div class="receipt-actions">
+        <button id="new-order-btn">Place New Order</button>
+    </div>
+</div>
+
+<!-- History Container -->
+<div id="history-container" class="container history-container hidden">
+    <div class="header">
+        <h2>Your Order History</h2>
+        <button id="back-to-menu-btn">Back to Menu</button>
+    </div>
+    <div id="history-items"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
